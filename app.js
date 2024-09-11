@@ -18,6 +18,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 
+//start express app
 const app = express();
 
 // npm install pug
