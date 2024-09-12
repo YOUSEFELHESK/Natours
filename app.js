@@ -17,6 +17,7 @@ const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 //start express app
 const app = express();
@@ -71,6 +72,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 // Just Test Middeleware
 // app.use((req, res, next) => {
