@@ -76,7 +76,7 @@ exports.getMonthlyPlan = async (req, res) => {
   try {
     const year = req.params.year * 1; // 2021
 
-    console.log(year);
+    // console.log(year);
 
     const plan = await Tour.aggregate([
       {
@@ -112,7 +112,7 @@ exports.getMonthlyPlan = async (req, res) => {
         $limit: 12, // limit the number of digit month
       },
     ]);
-    console.log(plan);
+    // console.log(plan);
     res.status(200).json({
       status: 'success',
       data: plan,
