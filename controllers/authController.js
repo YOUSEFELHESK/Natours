@@ -169,7 +169,6 @@ exports.protect = catchAsync(async (req, res, next) => {
   req.user = CurrentUser;
   res.locals.user = CurrentUser;
 
-  console.log('okey...........');
   next();
 });
 
